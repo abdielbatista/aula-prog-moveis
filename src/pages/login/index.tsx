@@ -71,7 +71,7 @@ export default function Login(){
 
                 <Input></Input>
 
-                <Text style={style.titleInput}>Endereço de e-mail</Text>
+                {/* <Text style={style.titleInput}>Endereço de e-mail</Text>
 
                 <View style={style.BoxInput}>
 
@@ -111,7 +111,7 @@ export default function Login(){
                     }
                     
 
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
             </View>
 
