@@ -1,6 +1,6 @@
-import React, { forwardRef, Fragment } from "react";
+import React, { forwardRef, Fragment, LegacyRef } from "react";
 
-import {Text, View, TextInput, TextInputProps} from 'react-native';
+import {Text, View, TextInput, TextInputProps, TouchableOpacity} from 'react-native';
 import { themas } from "../../global/themes";
 import { style } from "./styles";
 
@@ -19,17 +19,30 @@ type Props = TextInputProps & {
     onIconRightPress?: () => void
 }
 
-export const Input = forwardRef(()=>{
+export const Input = forwardRef((Props:Props, ref: LegacyRef<TextInput> | null)=>{
+
+    const {IconLeft, IconRight, iconLeftName, icontRightName, title, onIconLeftPress, onIconRightPress, ...rest} = Props
+
     return(
         <Fragment>
             
-            <Text style={style.titleInput}></Text>
+            <Text style={style.titleInput}>{title}</Text>
 
             <View style={style.BoxInput}>
 
-                <TextInput style={style.Input}></TextInput>
+                {IconLeft && iconLeftName &&(
+                    <TouchableOpacity onPress={onIconLeftPress}>
+                        <IconLeft name={iconLeftName as any} color={themas.Colors.gray} style={style.icon}/>
+                    </TouchableOpacity>
+                )}
 
-                <MaterialIcons name="email" size={20} color={themas.Colors.gray}></MaterialIcons>
+                <TextInput style={style.Input} {...rest}></TextInput>
+
+                {IconRight && icontRightName && (
+                    <TouchableOpacity onPress={onIconRightPress}>
+                        <IconRight name={icontRightName as any} size={20} color={themas.Colors.gray} style={style.icon}/>
+                    </TouchableOpacity>
+                )}
             
             </View>
 

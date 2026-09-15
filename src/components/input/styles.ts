@@ -24,5 +24,8 @@ export const style = StyleSheet.create({
         marginLeft:5,
         color:themas.Colors.gray,
         marginTop:20
+    },
+    icon:{
+        width:'100%'
     }
 })

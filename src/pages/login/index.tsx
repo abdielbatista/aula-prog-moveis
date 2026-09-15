@@ -23,6 +23,7 @@ export default function Login(){
     
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const [showPassword,setShowPassword] = useState(true)
     const [loading,setLoading] = useState(false);
 
     async function getLogin(){
@@ -69,7 +70,23 @@ export default function Login(){
 
             <View style={style.boxMid}>
 
-                <Input></Input>
+                <Input 
+                    value={email}
+                    onChangeText={setEmail}
+                    title="ENDEREÇO DE E-MAIL"
+                    IconRight={MaterialIcons}
+                    icontRightName="email"
+                ></Input>
+
+                <Input
+                    value={password}
+                    onChangeText={setPassword}
+                    title="SENHA"
+                    IconRight={MaterialIcons}
+                    icontRightName="remove-red-eye"
+                    secureTextEntry={showPassword}
+                    onIconRightPress={()=>setShowPassword(!showPassword)}
+                ></Input>
 
                 {/* <Text style={style.titleInput}>Endereço de e-mail</Text>
 
