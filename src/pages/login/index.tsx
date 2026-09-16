@@ -17,6 +17,7 @@ import Logo from '../../assets/logo.png';
 import { MaterialIcons } from '@expo/vector-icons';
 import { themas } from "../../global/themes";
 import { Input } from "../../components/input";
+import { Button } from "../../components/Button";
 
 
 export default function Login(){
@@ -88,53 +89,23 @@ export default function Login(){
                     onIconRightPress={()=>setShowPassword(!showPassword)}
                 ></Input>
 
-                {/* <Text style={style.titleInput}>Endereço de e-mail</Text>
-
-                <View style={style.BoxInput}>
-
-                    <TextInput style={style.Input}
-                        value={email}
-                        onChangeText={setEmail}
-                    ></TextInput>
-
-                    <MaterialIcons name="email" size={20} color={themas.Colors.gray}></MaterialIcons>
-
-                </View>
-
-                <Text style={style.titleInput}>Senha</Text>
                 
-                <View style={style.BoxInput}>
-
-                    <TextInput style={style.Input}
-                        value={password}
-                        onChangeText={setPassword}
-                    ></TextInput>
-
-                    <MaterialIcons name="password" size={20} color={themas.Colors.gray}></MaterialIcons>
-
-                </View>
-
             </View>
 
-            <View style={style.boxBottom}>
-                
-                <TouchableOpacity style={style.button} onPress={()=>getLogin()}>
-                    {
-                        loading?
-                            <ActivityIndicator color={'FFFF'} size={'small'}/>
-                            :
-                            <Text style={style.textButton}>Entrar</Text>
-
-                    }
+                <View style={style.boxBottom}>
                     
+                    
+                    <Button>
+                        
+                    </Button>
+                    
+                </View>
 
-                </TouchableOpacity> */}
-
-            </View>
-
-            <Text style={style.textBottom}>Não tem conta ? <Text style={{color:themas.Colors.primary}}>Crie agora !</Text> </Text>
+        <Text style={style.textBottom}>Não tem conta ? <Text style={{color:themas.Colors.primary}}>Crie agora !</Text> </Text>
 
         </View>
+                    
+
 
     )
 }
