@@ -95,9 +95,7 @@ export default function Login(){
                 <View style={style.boxBottom}>
                     
                     
-                    <Button>
-                        
-                    </Button>
+                    <Button text="ENTRAR" loading={loading} onPress={()=>getLogin()}></Button>
                     
                 </View>
 
