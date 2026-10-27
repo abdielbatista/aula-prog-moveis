@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 // npx expo start --tunnel
 
@@ -18,9 +19,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { themas } from "../../global/themes";
 import { Input } from "../../components/input";
 import { Button } from "../../components/Button";
+import BottomRoutes from "../../routes/bottom.routes";
 
 
 export default function Login(){
+
+    const navigation = useNavigation<NavigationProp<any>>();
     
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
@@ -39,6 +43,9 @@ export default function Login(){
 
             setTimeout(()=>{
                 if(email == "abdielb@yahoo.com" && password == '12345'){
+
+                    navigation.navigate("BottomRoutes")
+
                     Alert.alert('Logado com sucesso')
                 }else{
                     Alert.alert('Usuario não encontrado')
