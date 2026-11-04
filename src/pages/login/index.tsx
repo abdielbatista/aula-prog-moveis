@@ -42,7 +42,7 @@ export default function Login(){
             //console.log('Logado com sucesso')
 
             setTimeout(()=>{
-                if(email == "abdielb@yahoo.com" && password == '12345'){
+                if(email == "a" && password == 'a'){
 
                     navigation.navigate("BottomRoutes")
 
@@ -51,12 +51,12 @@ export default function Login(){
                     Alert.alert('Usuario não encontrado')
                 }
 
-                setLoading(false) //verificar pq o botão entrar buga quando cai em Atenção','Informe os campos obrigatórios
-
             },3000)
 
         } catch (error){
             console.log(error)
+        }finally{
+            setLoading(false)
         }
     }   
 
