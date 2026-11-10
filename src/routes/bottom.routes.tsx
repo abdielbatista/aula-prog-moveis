@@ -13,7 +13,7 @@ export default function BottomRoutes(){
                 headerShown:false
             }}
 
-            tabBar={props=><CustomTabBar {...props}/>}
+            tabBar={pros=><CustomTabBar {...pros}/>}
 
         >
 
